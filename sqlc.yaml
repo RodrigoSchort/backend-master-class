@@ -1,0 +1,12 @@
+version: "1"
+packages:
+  - name: "db"
+    path: "./db/sqlc"
+    queries: "./db/query/"
+    schema: "./db/migration/"
+    engine: "postgresql"
+    emit_json_tags: true  # Optional, enables JSON tags for structs
+    emit_prepared_queries: false  # Optional, disables prepared queries
+    emit_interface: false  # Optional, disables generating interface
+    emit_exact_table_names: false  # Optional, keeps table names as is
+    sql_package: "database/sql"  # Set sql_package to "database/sql"
